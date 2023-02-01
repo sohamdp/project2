@@ -8,12 +8,12 @@ pipeline {
         }
         stage('Build Code') {
             steps {
-                sh "./prog1.py"
+                sh "python3 prog1.py"
             }
         }
      stage('Test Code') {
             steps {
-                sh "./test.py"
+                sh "python3 test.py"
             }
         }
     } 
