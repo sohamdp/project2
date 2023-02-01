@@ -1,0 +1,20 @@
+pipeline { 
+    agent any
+    stages {
+        stage('Clone Git') {
+            steps {
+                git 'https://github.com/sohamdp/project2.git'
+            }
+        }
+        stage('Build Code') {
+            steps {
+                sh "./prog1.py"
+            }
+        }
+     stage('Test Code') {
+            steps {
+                sh "./test.py"
+            }
+        }
+    } 
+}
